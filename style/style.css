@@ -243,7 +243,7 @@ body {
 
 @media only screen and (max-width: 600px) {
     body {
-        background: url("../img/mobile-bg.svg");
+        background: var(--bg);
         background-repeat: no-repeat;
         background-size: cover;
     }
