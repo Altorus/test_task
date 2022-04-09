@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+
     <title>Добро пожаловать!</title>
 </head>
+
 <body>
-    <!-- Общий контейнер для табов -->
-<div class="tabs">
-    <!--  Контейнер с вкладками   -->
-    <ul class="tab-header">
-       <li class="tab-header__item js-tab-trigger active" data-tab="1">Регистрация</li>
-       <li class="tab-header__item js-tab-trigger" data-tab="2">Авторизация</li>
-    </ul>
-    
-    <!--  Контейнер с блоками, которые содержат контент вкладок   -->
-    <ul class="tab-content">
-       <li class="tab-content__item js-tab-content active" data-tab="1">
-          Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты.
-       </li>
-       <li class="tab-content__item js-tab-content" data-tab="2">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum rem laboriosam cum repudiandae natus corrupti?
-       </li>
-    </ul>
- </div>
- <script src="script/script.js"></script>
+    <div class="container">
+        <!-- Общий контейнер для табов -->
+        <div class="tabs">
+            <!--  Контейнер с вкладками   -->
+            <ul class="tab-header">
+                <li class="tab-header__item js-tab-trigger active" data-tab="1">Регистрация</li>
+                <li class="tab-header__item js-tab-trigger" data-tab="2">Авторизация</li>
+            </ul>
+
+            <!--  Контейнер с блоками, которые содержат контент вкладок   -->
+            <ul class="tab-content">
+                <li class="tab-content__item js-tab-content active" data-tab="1">
+                    <form action="#" class="form">
+                        <div class="custom-input">
+                            <input type="text" id="name" placeholder="Ф.И.О">
+                            <input type="email" id="email" placeholder="E-mail">
+                            <input type="password" id="pass" placeholder="Пароль">
+                            <input type="textpassword" id="pass_repit" placeholder="Повтор пароля">
+                            <input type="button" value="Зарегистрироваться">
+                        </div>
+                    </form>
+                </li>
+                <li class="tab-content__item js-tab-content" data-tab="2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum rem laboriosam cum repudiandae natus corrupti?
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
 </body>
+
 </html>

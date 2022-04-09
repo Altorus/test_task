@@ -1,44 +1,80 @@
+@font-face {
+    font-family: "Helvetica";
+    src: url("/fonts/helvetica_regular.otf") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+}
+
+:root {
+    --bg: #000;
+    --color_active: #F3F3F3;
+    --color-disable: #8C8C8C;
+    --color-danger: #972424;
+    --orange: #FB7515;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+}
+
 .tabs {
-    width: 100%;
-    max-width: 500px;
- }
- /* Стили для списка вкладок */
- .tab-header {
+    width: 100vw;
+    max-width: 30vw;
+}
+
+
+/* Стили для списка вкладок */
+
+.tab-header {
     list-style: none;
     padding-left: 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin: 0;
- }
- /* Стили для вкладки */
- .tab-header__item {
+}
+
+
+/* Стили для вкладки */
+
+.tab-header__item {
     padding: 10px 20px;
     margin-right: 5px;
     cursor: pointer;
-    border: 1px solid #ddd;
- }
- /* Стили для активной вкладки */
- .tab-header__item.active {
-    color: red;
+}
+
+
+/* Стили для активной вкладки */
+
+.tab-header__item.active {
+    color: var(--color_active);
     border-bottom: none;
     position: relative;
-    background-color: #fff;
- }
- /* Стиль для списка контейнеров с содержимым вкладок */
- .tab-content {
+}
+
+
+/* Стиль для списка контейнеров с содержимым вкладок */
+
+.tab-content {
     list-style: none;
     padding: 0;
     margin: 0;
- }
- /* Стили для контейнера с содержимым вкладки. По умолчанию скрыт. */
- .tab-content__item {
+}
+
+
+/* Стили для контейнера с содержимым вкладки. По умолчанию скрыт. */
+
+.tab-content__item {
     display: none;
     padding: 20px;
-    border: 1px solid #ddd;
     margin-top: -1px;
- }
- /* Стили для активного контейнера вкладки */
- .tab-content__item.active {
+}
+
+
+/* Стили для активного контейнера вкладки */
+
+.tab-content__item.active {
     display: block;
- }
+}
