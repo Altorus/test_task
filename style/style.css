@@ -35,7 +35,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: var(--bg);
-    background: url("/img/Регистрация.svg");
+    background: url("/img/bg.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -46,18 +46,21 @@ body {
 }
 
 .container {
-    width: 1280px;
+    width: 100vw;
+    max-width: 1280px;
     height: 100vh;
     margin: 0 auto;
     padding: 93px 31px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .tabs {
     width: 450px;
     display: flex;
     flex-direction: column;
+    margin-right: 124px;
 }
 
 
@@ -113,7 +116,9 @@ body {
 
 .tab-content__item form .custom-input input {
     font-size: 18px;
-    width: 416px;
+    width: 36vw;
+    max-width: 450px;
+    min-width: 280px;
     padding: 18px 20px;
     border: 1px solid var(--color-disable);
     background: transparent;
@@ -137,7 +142,7 @@ body {
 .tab-content__item form .custom-input label {
     position: absolute;
     top: 50%;
-    right: 55px;
+    right: 1.6vw;
     transform: translateY(-50%);
 }
 
@@ -171,4 +176,99 @@ body {
 
 .container .label .btn a:hover {
     background-color: var(--orange_hover);
+}
+
+@media only screen and (max-width: 1024px) {
+    .tab-header__item {
+        font-size: 22px;
+    }
+    .tab-header__item.active {
+        font-size: 22px;
+    }
+    .container .label {
+        font-size: 54px;
+    }
+    .tab-content__item form .custom-input input {
+        font-size: 16px;
+    }
+    .tab-content__item form input[type="button"] {
+        font-size: 16px;
+    }
+    .tab-content__item form input[type="button"]:hover {
+        font-size: 16px;
+    }
+    .container .label .btn a {
+        font-size: 16px;
+    }
+    .tab-content__item form .custom-input label {
+        right: 1.9vw;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .tab-header__item {
+        font-size: 20px;
+    }
+    .tab-header__item.active {
+        font-size: 20px;
+    }
+    .container .label {
+        font-size: 42px;
+    }
+    .tab-content__item form .custom-input input {
+        font-size: 14px;
+    }
+    .tab-content__item form input[type="button"] {
+        font-size: 14px;
+    }
+    .tab-content__item form input[type="button"]:hover {
+        font-size: 14px;
+    }
+    .container .label .btn a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .tab-content__item form .custom-input label {
+        right: 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .tab-content__item form .custom-input label {
+        right: 3.2vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: url("/img/mobile-bg.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container {
+        width: 100vw;
+        max-width: 600px;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .container .label {
+        width: 280px;
+        margin-bottom: 28px;
+    }
+    .tabs {
+        margin: 0;
+        align-items: center;
+    }
+    .tab-content__item form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
