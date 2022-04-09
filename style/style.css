@@ -112,6 +112,7 @@ body {
 .custom-input {
     position: relative;
     margin-bottom: 18px;
+    width: 100%;
 }
 
 .tab-content__item form .custom-input input {
@@ -124,6 +125,12 @@ body {
     background: transparent;
     outline: none;
     color: var(--color_active);
+}
+
+.tab-content__item form {
+    width: 36vw;
+    max-width: 450px;
+    min-width: 280px;
 }
 
 .tab-content__item form input[type="button"] {
@@ -142,7 +149,7 @@ body {
 .tab-content__item form .custom-input label {
     position: absolute;
     top: 50%;
-    right: 1.6vw;
+    right: 1.9vw;
     transform: translateY(-50%);
 }
 
@@ -200,9 +207,6 @@ body {
     .container .label .btn a {
         font-size: 16px;
     }
-    .tab-content__item form .custom-input label {
-        right: 1.9vw;
-    }
 }
 
 @media only screen and (max-width: 910px) {
@@ -226,18 +230,6 @@ body {
     }
     .container .label .btn a {
         font-size: 14px;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .tab-content__item form .custom-input label {
-        right: 2.5vw;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .tab-content__item form .custom-input label {
-        right: 3.2vw;
     }
 }
 
