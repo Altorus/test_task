@@ -45,6 +45,18 @@ body {
     box-sizing: border-box;
 }
 
+.danger-input input {
+    border-color: var(--color-danger) !important;
+}
+
+.danger-input input::-webkit-input-placeholder {
+    color: var(--color-danger) !important;
+}
+
+.danger-input label svg path {
+    fill: var(--color-danger);
+}
+
 .container {
     width: 100vw;
     max-width: 1280px;
@@ -134,12 +146,26 @@ body {
 }
 
 .tab-content__item form input[type="button"] {
-    margin-bottom: 0;
     background-color: var(--orange);
     border: none;
     color: var(--color_active);
     padding: 18px 20px;
     font-size: 18px;
+}
+
+.btn-bar {
+    display: flex;
+    align-items: center;
+}
+
+.tab-content__item form .btn a {
+    margin-bottom: 0;
+    color: var(--color_active);
+    margin-left: 36px;
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: normal;
+    text-decoration: none;
 }
 
 .tab-content__item form input[type="button"]:hover {
@@ -149,7 +175,7 @@ body {
 .tab-content__item form .custom-input label {
     position: absolute;
     top: 50%;
-    right: 1.9vw;
+    right: 20px;
     transform: translateY(-50%);
 }
 
@@ -171,19 +197,8 @@ body {
     font-weight: 700;
 }
 
-.container .label .btn a {
-    margin-bottom: 0;
-    background-color: var(--orange);
-    border: none;
-    color: var(--color_active);
-    padding: 18px 20px;
-    font-size: 18px;
-    text-decoration: none;
-}
 
-.container .label .btn a:hover {
-    background-color: var(--orange_hover);
-}
+/* стили для ошибки */
 
 @media only screen and (max-width: 1024px) {
     .tab-header__item {
@@ -204,12 +219,12 @@ body {
     .tab-content__item form input[type="button"]:hover {
         font-size: 16px;
     }
-    .container .label .btn a {
+    .tab-content__item form .btn a {
         font-size: 16px;
     }
 }
 
-@media only screen and (max-width: 910px) {
+@media only screen and (max-width: 975px) {
     .tab-header__item {
         font-size: 20px;
     }
@@ -228,8 +243,9 @@ body {
     .tab-content__item form input[type="button"]:hover {
         font-size: 14px;
     }
-    .container .label .btn a {
+    .tab-content__item form .btn a {
         font-size: 14px;
+        margin-left: 14px;
     }
 }
 
