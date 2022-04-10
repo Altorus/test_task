@@ -61,6 +61,7 @@ $('#btn-reg').click(() => {
         alert("OK")
     }
 })
+
 $('#btn-aut').click(() => {
     let name = $('#name_aut_input').val()
     let pass = $('#pass_aut_input').val()
@@ -82,7 +83,7 @@ $('#btn-aut').click(() => {
     }
 
     if (error) {
-        console.log($('#req_aut'))
+        $('#req_aut').html(error)
     } else {
         alert("OK")
     }
