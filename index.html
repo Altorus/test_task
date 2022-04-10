@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <title>Добро пожаловать!</title>
 </head>
 
 <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <div class="container">
         <!-- Общий контейнер для табов -->
         <div class="tabs">
@@ -25,15 +24,15 @@
             <ul class="tab-content">
                 <li class="tab-content__item js-tab-content active" data-tab="1">
                     <form action="#" class="form">
-                        <div class="custom-input">
-                            <input type="text" id="name" placeholder="Ф.И.О">
+                        <div class="custom-input" id="name_reg">
+                            <input type="text" id="name_reg_input" placeholder="Ф.И.О">
                             <label for="name">
                                 <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9705 5.96829C12.9705 8.17106 11.2043 9.93733 9 9.93733C6.79642 9.93733 5.02951 8.17106 5.02951 5.96829C5.02951 3.76552 6.79642 2 9 2C11.2043 2 12.9705 3.76552 12.9705 5.96829ZM9 17C5.74678 17 3 16.4712 3 14.4312C3 12.3905 5.76404 11.8804 9 11.8804C12.254 11.8804 15 12.4092 15 14.4492C15 16.49 12.236 17 9 17Z" fill="#8C8C8C"/>
                                 </svg>
                             </label>
                         </div>
-                        <div class="custom-input">
+                        <div class="custom-input" id="email_reg">
                             <input type="email" id="email" placeholder="E-mail">
                             <label for="name">
                                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,15 +40,15 @@
                                 </svg>    
                             </label>
                         </div>
-                        <div class="custom-input danger-input">
-                            <input type="password" id="pass" placeholder="Пароль">
+                        <div class="custom-input" id="pass_reg">
+                            <input type="password" id="pass_reg_input" placeholder="Пароль">
                             <label for="name">
                                 <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.142 4.047V5.19701C12.4338 5.60022 13.375 6.7696 13.375 8.1663V11.869C13.375 13.5981 11.9415 15 10.1742 15H3.8266C2.05852 15 0.625 13.5981 0.625 11.869V8.1663C0.625 6.7696 1.56696 5.60022 2.85796 5.19701V4.047C2.86559 1.81109 4.7175 0 6.98857 0C9.29012 0 11.142 1.81109 11.142 4.047ZM7.00381 1.30428C8.55088 1.30428 9.80835 2.53404 9.80835 4.047V5.03528H4.19165V4.0321C4.19927 2.52658 5.45674 1.30428 7.00381 1.30428ZM7.66684 10.8412C7.66684 11.2064 7.36962 11.4971 6.99619 11.4971C6.63038 11.4971 6.33316 11.2064 6.33316 10.8412V9.18662C6.33316 8.82888 6.63038 8.53821 6.99619 8.53821C7.36962 8.53821 7.66684 8.82888 7.66684 9.18662V10.8412Z" fill="#8C8C8C"/>
                                 </svg>                                    
                             </label>
                         </div>
-                        <div class="custom-input">
+                        <div class="custom-input" id="pass_repit_reg">
                             <input type="password" id="pass_repit" placeholder="Повтор пароля">
                             <label for="name">
                                 <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,31 +57,33 @@
                             </label>
                         </div>
                         <div class="btn-bar">
-                            <input type="button" value="Зарегистрироваться">
+                            <input type="button" id='btn-reg' value="Зарегистрироваться">
                             <div class="btn"><a href="#">На главную</a></div>
                         </div>
                     </form>
                 </li>
                 <li class="tab-content__item js-tab-content" data-tab="2">
                     <form action="#" class="form">
-                        <div class="custom-input">
-                            <input type="text" id="name" placeholder="Ф.И.О">
+                        <div class="custom-input" id="name_aut">
+                            <input type="text" id="name_aut_input" placeholder="Ф.И.О">
                             <label for="name">
                                 <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9705 5.96829C12.9705 8.17106 11.2043 9.93733 9 9.93733C6.79642 9.93733 5.02951 8.17106 5.02951 5.96829C5.02951 3.76552 6.79642 2 9 2C11.2043 2 12.9705 3.76552 12.9705 5.96829ZM9 17C5.74678 17 3 16.4712 3 14.4312C3 12.3905 5.76404 11.8804 9 11.8804C12.254 11.8804 15 12.4092 15 14.4492C15 16.49 12.236 17 9 17Z" fill="#8C8C8C"/>
                                 </svg>
                             </label>
                         </div>
-                        <div class="custom-input">
-                            <input type="password" id="pass" placeholder="Пароль">
+                        <div class="custom-input" id="pass_aut">
+                            <input type="password" id="pass_aut_input" placeholder="Пароль">
                             <label for="name">
                                 <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.142 4.047V5.19701C12.4338 5.60022 13.375 6.7696 13.375 8.1663V11.869C13.375 13.5981 11.9415 15 10.1742 15H3.8266C2.05852 15 0.625 13.5981 0.625 11.869V8.1663C0.625 6.7696 1.56696 5.60022 2.85796 5.19701V4.047C2.86559 1.81109 4.7175 0 6.98857 0C9.29012 0 11.142 1.81109 11.142 4.047ZM7.00381 1.30428C8.55088 1.30428 9.80835 2.53404 9.80835 4.047V5.03528H4.19165V4.0321C4.19927 2.52658 5.45674 1.30428 7.00381 1.30428ZM7.66684 10.8412C7.66684 11.2064 7.36962 11.4971 6.99619 11.4971C6.63038 11.4971 6.33316 11.2064 6.33316 10.8412V9.18662C6.33316 8.82888 6.63038 8.53821 6.99619 8.53821C7.36962 8.53821 7.66684 8.82888 7.66684 9.18662V10.8412Z" fill="#8C8C8C"/>
                                 </svg>                                    
                             </label>
                         </div>
-                        <input type="button" value="Авторизоваться">
-                        <div class="btn"><a href="#">На главную</a></div>
+                        <div class="btn-bar">
+                            <input type="button" id='btn-reg' value="Авторизоваться">
+                            <div class="btn"><a href="#">На главную</a></div>
+                        </div>
                     </form>
                 </li>
             </ul>
