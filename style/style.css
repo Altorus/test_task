@@ -139,6 +139,10 @@ body {
     color: var(--color_active);
 }
 
+.req {
+    margin-top: 18px;
+}
+
 .tab-content__item form {
     width: 36vw;
     max-width: 450px;
@@ -222,6 +226,9 @@ body {
     .tab-content__item form .btn a {
         font-size: 16px;
     }
+    .req {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 975px) {
@@ -246,6 +253,9 @@ body {
     .tab-content__item form .btn a {
         font-size: 14px;
         margin-left: 14px;
+    }
+    .req {
+        font-size: 14px;
     }
 }
 

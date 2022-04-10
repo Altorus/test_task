@@ -19,38 +19,38 @@ $('#btn-reg').click(() => {
     let error = ''
 
     if (!name) {
-        error += "Вы не ввели Ф.И.О\n"
-        $('#name_reg').addClass('danger-input')
+        error += "Вы не ввели Ф.И.О<br>"
+        $('#name_reg').addClass('danger-input vivify shake')
     } else {
-        $('#name_reg').removeClass('danger-input')
+        $('#name_reg').removeClass('danger-input vivify shake')
     }
     if (!email) {
-        error += 'Вы не ввели почту\n'
-        $('#email_reg').addClass('danger-input')
+        error += 'Вы не ввели почту<br>'
+        $('#email_reg').addClass('danger-input vivify shake')
     } else {
-        $('#email_reg').removeClass('danger-input')
+        $('#email_reg').removeClass('danger-input vivify shake')
     }
     if (!pass) {
-        error += 'Вы не ввели пароль\n'
-        $('#pass_reg').addClass('danger-input')
+        error += 'Вы не ввели пароль<br>'
+        $('#pass_reg').addClass('danger-input vivify shake')
     } else {
-        $('#pass_reg').removeClass('danger-input')
+        $('#pass_reg').removeClass('danger-input vivify shake')
 
     }
     if (passRepit) {
         if (passRepit != pass) {
-            error += 'Пароли не совпадают\n'
-            $('#pass_repit_reg').addClass('danger-input')
+            error += 'Пароли не совпадают<br>'
+            $('#pass_repit_reg').addClass('danger-input vivify shake')
         } else {
-            $('#pass_repit_reg').removeClass('danger-input')
+            $('#pass_repit_reg').removeClass('danger-input vivify shake')
         }
     } else {
-        error += 'Вы не ввели повтор пароля\n'
-        $('#pass_repit_reg').addClass('danger-input')
+        error += 'Вы не ввели повтор пароля<br>'
+        $('#pass_repit_reg').addClass('danger-input vivify shake')
     }
 
     if (error) {
-        alert(error)
+        $('#req_reg').html(error)
     } else {
         alert("OK")
     }
@@ -62,21 +62,21 @@ $('#btn-aut').click(() => {
     let error = ''
 
     if (!name) {
-        error += "Вы не ввели Ф.И.О\n"
-        $('#name_aut').addClass('danger-input')
+        error += "Вы не ввели Ф.И.О<br>"
+        $('#name_aut').addClass('danger-input vivify shake')
     } else {
-        $('#name_aut').removeClass('danger-input')
+        $('#name_aut').removeClass('danger-input vivify shake')
     }
     if (!pass) {
-        error += 'Вы не ввели пароль\n'
-        $('#pass_aut').addClass('danger-input')
+        error += 'Вы не ввели пароль<br>'
+        $('#pass_aut').addClass('danger-input vivify shake')
     } else {
-        $('#pass_aut').removeClass('danger-input')
+        $('#pass_aut').removeClass('danger-input vivify shake')
 
     }
 
     if (error) {
-        alert(error)
+        console.log($('#req_aut'))
     } else {
         alert("OK")
     }
