@@ -15,6 +15,7 @@ $('#btn-reg').click(() => {
     let email = $('#email').val()
     let pass = $('#pass_reg_input').val()
     let passRepit = $('#pass_repit').val()
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
 
     let error = ''
 
@@ -28,7 +29,12 @@ $('#btn-reg').click(() => {
         error += 'Вы не ввели почту<br>'
         $('#email_reg').addClass('danger-input vivify shake')
     } else {
-        $('#email_reg').removeClass('danger-input vivify shake')
+        if (!email.match(pattern)) {
+            error += 'Почта не соответствует требованиям<br>'
+            $('#email_reg').addClass('danger-input vivify shake')
+        } else {
+            $('#email_reg').removeClass('danger-input vivify shake')
+        }
     }
     if (!pass) {
         error += 'Вы не ввели пароль<br>'
