@@ -132,8 +132,9 @@ body {
     width: 36vw;
     max-width: 450px;
     min-width: 280px;
-    padding: 18px 20px;
-    border: 1px solid var(--color-disable);
+    padding: 18px 0;
+    border: none;
+    border-bottom: 1px solid var(--color-disable);
     background: transparent;
     outline: none;
     color: var(--color_active);
@@ -179,7 +180,7 @@ body {
 .tab-content__item form .custom-input label {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 0;
     transform: translateY(-50%);
 }
 
